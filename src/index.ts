@@ -1,4 +1,4 @@
-function GetAvarage(Array: number[]) : number
+function getAvarage(Array: number[]) : number
 {
     let sum=0;
     let avg;
@@ -7,7 +7,8 @@ function GetAvarage(Array: number[]) : number
         sum=sum+Array[i];
         count++;
     }
-    return avg=sum/count;
+     avg=sum/count;
+     return avg;
 
    // const array1:number[]=[];
 }
@@ -23,23 +24,12 @@ function getAmountOfPositive(array2: number[]) : number
     }
     return positives;
 }
-function sortList(array3: number[]) : void
+function sortList(array3: number[]) : number[]
 {
-    let sort:number[]=[];
-    for(let i=0;i<array3.length;i++)
-    {
-        if(array3[i+1]<array3[i])
-        {
-            sort[i]=array3[i+1];
-        }
-        else
-        { sort[i]=array3[i];}
-    }
-    for(let i=0;i<sort.length;i++)
-    {
-        array3[i]=sort[i];
-    }
+    let sortarr : number[]=[];
+    sortarr=array3.sort();
+    return sortarr;
 }
-console.log(GetAvarage([3, 5, 7, 89, 78])); //מחוץ לפונקציה ולהריץ בטרמינל
+console.log(getAvarage([3, 5, 7, 89, 78])); //מחוץ לפונקציה ולהריץ בטרמינל
 console.log(getAmountOfPositive([-4,5,9,-30,7]));
-console.log(sortList([60,5,9,-30,7,1]));
+console.log(sortList([5,9,-30,7,1]));
