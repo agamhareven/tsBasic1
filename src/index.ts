@@ -1,30 +1,26 @@
-function getAvarage(Array: number[]) : number
+let getAvarage=(Array: number[]): number => 
 {
     let sum=0;
     let avg;
     let count=0;
-    for (let i=0;i<Array.length;i++){
-        sum=sum+Array[i];
-        count++;
-    }
+    Array.forEach(element => {
+        sum=sum+element;
+    });
      avg=sum/count;
      return avg;
-
-   // const array1:number[]=[];
 }
-function getAmountOfPositive(array2: number[]) : number
+let getAmountOfPositive=(array2: number[]) : number =>
 {
     let positives=0;
-    for (let i=0;i<array2.length;i++)
-    {
-        if(array2[i]>0)
+    array2.forEach(element => {
+        if(element>0)
         {
             positives++;
         }
-    }
+    });
     return positives;
 }
-function sortList(array3: number[]) : number[]
+let sortList=(array3: number[]) : number[] =>
 {
     let sortarr : number[]=[];
     sortarr=array3.sort();
